@@ -108,6 +108,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\large_bg.jpg" />
     <Content Include="Content\images\phone\port_back.png" />
     <Content Include="Content\images\phone\port_fore.png" />
     <Content Include="Content\images\phone\port_shadow.png" />
