@@ -108,8 +108,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\icons\cloud.png" />
+    <Content Include="Content\images\icons\community.png" />
+    <Content Include="Content\images\icons\design.png" />
+    <Content Include="Content\images\icons\icons_bg.png" />
     <Content Include="Content\images\large_bg.jpg" />
     <Content Include="Content\images\phone\port_back.png" />
+    <Content Include="Content\images\phone\port_back_shadow.png" />
     <Content Include="Content\images\phone\port_fore.png" />
     <Content Include="Content\images\phone\port_shadow.png" />
     <Content Include="Content\images\screenshots\ss1.png" />
@@ -155,6 +160,7 @@
     <Content Include="Scripts\bootstrap.min.js">
       <DependentUpon>bootstrap.js</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\Twee.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js">
       <DependentUpon>jquery-1.8.2.js</DependentUpon>

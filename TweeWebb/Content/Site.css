@@ -76,12 +76,19 @@ textarea
     display: none;
 }
 
+.phone-shadow {
+    height: 695px;
+    width: 400px;
+    position: relative;
+    background: url(/Content/images/phone/port_shadow.png);
+
+}
 
 .phone-wrapper {
     height: 695px;
     width: 400px;
     position: relative;
-    background: url(/Content/images/phone/port_back.png);
+    background: url(/Content/images/phone/port_back_shadow.png);
 }
 .phone-overlay {
     height: 695px;
@@ -102,4 +109,29 @@ textarea
 .span6 .m-btn {
     width: 100%;
     padding: 20px 0;
+}
+
+ul.pitch {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+div.pitch-row {
+    margin-bottom: 10px;
+}
+
+div.pitch-row img {
+    height: 100px;
+    float: left;
+}
+
+div.pitch-row .information {
+    float: left;
+    margin: 15px;
+}
+
+div.pitch-row .information h1, div.pitch-row .information p{
+    margin: 0;
 }
