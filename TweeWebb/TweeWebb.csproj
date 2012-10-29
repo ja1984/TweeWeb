@@ -114,7 +114,11 @@
     <Content Include="Content\images\icons\community.png" />
     <Content Include="Content\images\icons\design-alt.png" />
     <Content Include="Content\images\icons\design.png" />
+    <Content Include="Content\images\icons\download-alt.png" />
+    <Content Include="Content\images\icons\download.png" />
     <Content Include="Content\images\icons\icons_bg.png" />
+    <Content Include="Content\images\icons\profiles-alt.png" />
+    <Content Include="Content\images\icons\profiles.png" />
     <Content Include="Content\images\large_bg.jpg" />
     <Content Include="Content\images\phone\port_back.png" />
     <Content Include="Content\images\phone\port_back_shadow.png" />

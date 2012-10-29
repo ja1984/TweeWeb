@@ -86,15 +86,6 @@ textarea {
     top: 1px;
     background: url(/Content/images/phone/port_fore.png);
 }
-
-.download {
-    background: #fff;
-    padding: 5px 0;
-    margin-top: 5px;
-    text-align: center;
-    width: 100%;
-}
-
 .span6 .m-btn {
     width: 100%;
     padding: 20px 0;
@@ -118,7 +109,7 @@ div.pitch-row {
 
     div.pitch-row .information {
         float: left;
-        margin: 15px;
+        margin: 15px 15px 15px 115px;
     }
 
         div.pitch-row .information h1, div.pitch-row .information p {
@@ -139,35 +130,52 @@ div.pitch-row {
         background-color: #9c0;
     }
 
-.img {
+.pitch-row {
     height: 100px;
-    width: 100px;
     background-size: 100px;
-    background-position: center;
-    -webkit-transition: background-image 1.5s;
-    float: left;
+    background-position: left center;
+    -webkit-transition: background-image 1.5s ease;
+    background-repeat: no-repeat;
+    cursor: default;
 }
 
-.img.cloud {
+.pitch-row.cloud {
     background-image: url(/Content/images/icons/cloud.png);
 }
 
-.img.cloud:hover {
+.pitch-row.cloud:hover {
     background-image: url(/Content/images/icons/cloud-alt.png);
 }
 
-.img.design {
+.pitch-row.design {
     background-image: url(/Content/images/icons/design.png);
 }
 
-.img.design:hover {
+.pitch-row.design:hover {
     background-image: url(/Content/images/icons/design-alt.png);
 }
 
-.img.community {
+.pitch-row.community {
     background-image: url(/Content/images/icons/community.png);
 }
 
-.img.community:hover {
+.pitch-row.community:hover {
     background-image: url(/Content/images/icons/community-alt.png);
+}
+
+
+.pitch-row.download {
+    background-image: url(/Content/images/icons/download.png);
+}
+
+.pitch-row.download:hover {
+    background-image: url(/Content/images/icons/download-alt.png);
+}
+
+.pitch-row.profiles {
+    background-image: url(/Content/images/icons/profiles.png);
+}
+
+.pitch-row.profiles:hover {
+    background-image: url(/Content/images/icons/profiles-alt.png);
 }
