@@ -119,6 +119,8 @@
     <Content Include="Content\images\icons\icons_bg.png" />
     <Content Include="Content\images\icons\profiles-alt.png" />
     <Content Include="Content\images\icons\profiles.png" />
+    <Content Include="Content\images\icons\totop-alt.png" />
+    <Content Include="Content\images\icons\totop.png" />
     <Content Include="Content\images\large_bg.jpg" />
     <Content Include="Content\images\phone\port_back.png" />
     <Content Include="Content\images\phone\port_back_shadow.png" />
