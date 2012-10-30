@@ -86,6 +86,7 @@ textarea {
     top: 1px;
     background: url(/Content/images/phone/port_fore.png);
 }
+
 .span6 .m-btn {
     width: 100%;
     padding: 20px 0;
@@ -107,75 +108,129 @@ div.pitch-row {
         float: left;
     }
 
+
+
+
     div.pitch-row .information {
-        float: left;
-        margin: 15px 15px 15px 115px;
+        position: absolute;
+        top: 0;
+        left: 115px;
     }
 
         div.pitch-row .information h1, div.pitch-row .information p {
             margin: 0;
         }
 
-
-.ball {
-    height: 92px;
-    width: 92px;
-    border-radius: 50px;
-    background-color: #333;
-    transition: background-color 2s;
-    -webkit-transition: background-color 1.5s;
-}
-
-    .ball:hover {
-        background-color: #9c0;
-    }
-
 .pitch-row {
     height: 100px;
     background-size: 100px;
     background-position: left center;
-    -webkit-transition: background-image 1.5s ease;
+    -webkit-transition: opacity 1s ease;
     background-repeat: no-repeat;
     cursor: default;
+    position: relative;
+}
+
+.background {
+    height: 100px;
+    width: 100%;
+    background-size: 100px;
+    background-position: left center;
+    -webkit-transition: opacity 1s ease;
+    background-repeat: no-repeat;
+    cursor: default;
+    position: absolute;
 }
 
 .pitch-row.cloud {
-    background-image: url(/Content/images/icons/cloud.png);
-}
-
-.pitch-row.cloud:hover {
     background-image: url(/Content/images/icons/cloud-alt.png);
 }
 
+.background.cloud {
+    background-image: url(/Content/images/icons/cloud.png);
+}
+
+.background.cloud:hover {
+    opacity: 0;
+}
+
 .pitch-row.design {
+    background-image: url(/Content/images/icons/design-alt.png);
+}
+
+.background.design {
     background-image: url(/Content/images/icons/design.png);
 }
 
-.pitch-row.design:hover {
-    background-image: url(/Content/images/icons/design-alt.png);
+.background.design:hover {
+    opacity: 0;
 }
+
+.pitch-row.community {
+    background-image: url(/Content/images/icons/community-alt.png);
+}
+
+.background.community {
+    background-image: url(/Content/images/icons/community.png);
+}
+
+.background.community:hover {
+    opacity: 0;
+}
+
+.pitch-row.download {
+    background-image: url(/Content/images/icons/download-alt.png);
+}
+
+.background.download {
+    background-image: url(/Content/images/icons/download.png);
+}
+
+.background.download:hover {
+    opacity: 0;
+}
+
+.pitch-row.profile {
+    background-image: url(/Content/images/icons/profiles-alt.png);
+}
+
+.background.profile {
+    background-image: url(/Content/images/icons/profiles.png);
+}
+
+.background.profile:hover {
+    opacity: 0;
+}
+
+/*.pitch-row.design {
+    background-image: url(/Content/images/icons/design.png);
+}
+
+    .pitch-row.design:hover {
+        background-image: url(/Content/images/icons/design-alt.png);
+    }
 
 .pitch-row.community {
     background-image: url(/Content/images/icons/community.png);
 }
 
-.pitch-row.community:hover {
-    background-image: url(/Content/images/icons/community-alt.png);
-}
+    .pitch-row.community:hover {
+        background-image: url(/Content/images/icons/community-alt.png);
+    }
 
 
 .pitch-row.download {
     background-image: url(/Content/images/icons/download.png);
 }
 
-.pitch-row.download:hover {
-    background-image: url(/Content/images/icons/download-alt.png);
-}
+    .pitch-row.download:hover {
+        background-image: url(/Content/images/icons/download-alt.png);
+    }
 
 .pitch-row.profiles {
     background-image: url(/Content/images/icons/profiles.png);
 }
 
-.pitch-row.profiles:hover {
-    background-image: url(/Content/images/icons/profiles-alt.png);
-}
+    .pitch-row.profiles:hover {
+        background-image: url(/Content/images/icons/profiles-alt.png);
+    }*/
