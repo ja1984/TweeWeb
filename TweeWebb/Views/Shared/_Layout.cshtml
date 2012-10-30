@@ -12,79 +12,98 @@
 
 <body>
 
-    <div class="container">
+    <div id="menuHolder">
+        <div id="nagging-nav">
+            <div id="nagging-link-holder">
+                <div style="width: 720px; margin: 0 auto; background: #dfdfdf;">
+                    <ul>
+                        <li data-id="home" class="pitch-row totop">
+                            <div class="background totop"></div>
+                        </li>
+                        <li data-id="cloud" class="pitch-row cloud">
+                            <div class="background cloud"></div>
+                        </li>
+                        <li data-id="design" class="pitch-row design">
+                            <div class="background design"></div>
+                        </li>
+                        <li data-id="download" class="pitch-row download">
+                            <div class="background download"></div>
+                        </li>
+                        <li data-id="community" class="pitch-row community">
+                            <div class="background community"></div>
+                        </li>
+                        <li data-id="profile" class="pitch-row profile">
+                            <div class="background profile"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // NAGGING MENU -->
+
+    <div class="container" id="home">
+        <div class="row-fluid">
+            <div class="span12">
+                <img src="/Content/images/tweelogo_noborder.png" style="float: left; height: 140px; float: right;" /><p style="font-weight: bold; font-size: 100px; margin-top: 60px; float: right;">Twee</p>
+            </div>
+        </div>
         <div class="row">
             <div class="span5">
                 @RenderBody()
             </div>
             <div class="span7">
-                <div class="row-fluid">
-                    <div class="span12" style="margin-top: 25px;">
-                        <img src="/Content/images/tweelogo_noborder.png" style="float: left;" /><p style="font-weight: bold; font-size: 130px; margin-top: 95px;">Twee</p>
-                    </div>
 
-                </div>
                 <div class="row-fluid">
-                    @*                    <div class="span6">
-                        <a href="#" class="m-btn big purple">Download latest stable <i class="m-icon-big-swapdown m-icon-white"></i></a>
-                        <div class="download stable">
-                            <img src="http://qrcode.kaywa.com/img.php?s=5&d=https://www.dropbox.com/s/z2sdwva9zs1kmas/twee.apk" />
-                        </div>
-                    </div>*@
                     <div class="span12">
 
                         <ul class="pitch">
 
-                            <li>
+                            <li data-id="cloud">
                                 <div class="pitch-row cloud">
                                     <div class="information">
                                         <h1>Cloud backup</h1>
                                         <p>Backup your progress to the internet and sync between devices</p>
-                                        <a href="#">asdasd</a>
                                     </div>
                                     <div class="background cloud"></div>
                                 </div>
                             </li>
 
-                            <li>
+                            <li data-id="design">
                                 <div class="pitch-row design">
                                     <div class="information">
                                         <h1>Beautiful design</h1>
-                                        <span>Follows the android design guidelines and supports <a href="http://developer.android.com/design/style/themes.html" target="_blank">themes</a></span>
-                                        <a href="#">asdasd</a>
+                                        <span>Follows the android design guidelines and supports themes</span>
                                     </div>
                                     <div class="background design"></div>
                                 </div>
                             </li>
 
-                            <li>
+                            <li data-id="download">
                                 <div class="pitch-row download">
                                     <div class="information">
-                                        <h1>Cloud backup</h1>
-                                        <p>Backup your progress to the internet and sync between devices</p>
-                                        <a href="#">asdasd</a>
+                                        <h1>Download</h1>
+                                        <p>latest beta or keep it safe by downloading stable version</p>
                                     </div>
                                     <div class="background download"></div>
                                 </div>
-                            </li>
+                                </l>
 
-                            <li>
+                            <li data-id="community">
                                 <div class="pitch-row community">
                                     <div class="information">
                                         <h1>Community driven</h1>
-                                        <span>Information comes from the open source community <a href="http://www.thetvdb.com" target="_blank">TheTVDB</a></span>
-                                        <a href="#">asdasd</a>
+                                        <span>Information comes from the open source community TheTVDB</span>
                                     </div>
                                     <div class="background community"></div>
                                 </div>
                             </li>
 
-                            <li>
+                            <li data-id="profile">
                                 <div class="pitch-row profile">
                                     <div class="information">
-                                        <h1>Cloud backup</h1>
-                                        <p>Backup your progress to the internet and sync between devices</p>
-                                        <a href="#">asdasd</a>
+                                        <h1>User profiles</h1>
+                                        <p>Multiple users on onw phone</p>
                                     </div>
                                     <div class="background profile"></div>
                                 </div>
@@ -97,6 +116,22 @@
                 </div>
             </div>
         </div>
+
+    </div>
+    <div class="container page" id="cloud">
+        <h1>Cloud Backup</h1>
+    </div>
+    <div class="container page" id="design">
+        <h1>Beautiful Design</h1>
+    </div>
+    <div class="container page" id="download">
+        <h1>Download</h1>
+    </div>
+    <div class="container page" id="community">
+        <h1>Community driven</h1>
+    </div>
+    <div class="container page" id="profile">
+        <h1>Profiles</h1>
     </div>
 
 
@@ -106,5 +141,35 @@
     <script src="@Url.Content("~/Scripts/modernizr-2.0.6-development-only.js")" type="text/javascript"></script>
     <script type="text/javascript" src="/Scripts/bootstrap.js"></script>
     @RenderSection("JavaScript", false)
+    <script type="text/javascript">
+        $(function () {
+            $('li').click(function () {
+                var id = $(this).data("id");
+                $('html, body').animate({
+                    scrollTop: $('#' + id).offset().top
+                }, 2000);
+            });
+
+        });
+
+
+        //nagging
+        $(function () {
+            var menu = $('#nagging-nav');
+
+            $(window).scroll(function () {
+
+                if ($(this).scrollTop() > 600) {
+
+                    menu.fadeIn(500)
+
+                } else if ($(this).scrollTop() < 600) {
+
+                    menu.fadeOut(500)
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>

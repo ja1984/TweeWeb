@@ -5,6 +5,12 @@ body {
     background-color: #dfdfdf;
     background-image: url(/Content/images/large_bg.jpg);
     background-repeat: repeat-x;
+    overflow: hidden;
+    height: 100%;
+}
+
+html {
+    height: 100%;
 }
 
 header,
@@ -66,14 +72,14 @@ textarea {
 }
 
 .phone-shadow {
-    height: 695px;
+    height: 655px;
     width: 400px;
     position: relative;
     background: url(/Content/images/phone/port_shadow.png);
 }
 
 .phone-wrapper {
-    height: 695px;
+    height: 655px;
     width: 400px;
     position: relative;
     background: url(/Content/images/phone/port_back_shadow.png);
@@ -83,7 +89,7 @@ textarea {
     height: 695px;
     width: 400px;
     position: absolute;
-    top: 1px;
+    top: -41px;
     background: url(/Content/images/phone/port_fore.png);
 }
 
@@ -93,7 +99,7 @@ textarea {
 }
 
 ul.pitch {
-    margin: 0;
+    margin: 20px 0 0 0;
     padding: 0;
     list-style-type: none;
 }
@@ -113,7 +119,7 @@ div.pitch-row {
 
     div.pitch-row .information {
         position: absolute;
-        top: 0;
+        top: 10px;
         left: 115px;
     }
 
@@ -125,9 +131,7 @@ div.pitch-row {
     height: 100px;
     background-size: 100px;
     background-position: left center;
-    -webkit-transition: opacity 1s ease;
     background-repeat: no-repeat;
-    cursor: default;
     position: relative;
 }
 
@@ -136,9 +140,12 @@ div.pitch-row {
     width: 100%;
     background-size: 100px;
     background-position: left center;
+    transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
     -webkit-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
     background-repeat: no-repeat;
-    cursor: default;
+    cursor: pointer;
     position: absolute;
 }
 
@@ -150,9 +157,23 @@ div.pitch-row {
     background-image: url(/Content/images/icons/cloud.png);
 }
 
-.background.cloud:hover {
-    opacity: 0;
+    .background.cloud:hover {
+        opacity: 0;
+    }
+
+
+    .pitch-row.totop {
+    background-image: url(/Content/images/icons/totop-alt.png);
 }
+
+.background.totop {
+    background-image: url(/Content/images/icons/totop.png);
+}
+
+    .background.totop:hover {
+        opacity: 0;
+    }
+
 
 .pitch-row.design {
     background-image: url(/Content/images/icons/design-alt.png);
@@ -162,9 +183,9 @@ div.pitch-row {
     background-image: url(/Content/images/icons/design.png);
 }
 
-.background.design:hover {
-    opacity: 0;
-}
+    .background.design:hover {
+        opacity: 0;
+    }
 
 .pitch-row.community {
     background-image: url(/Content/images/icons/community-alt.png);
@@ -174,9 +195,9 @@ div.pitch-row {
     background-image: url(/Content/images/icons/community.png);
 }
 
-.background.community:hover {
-    opacity: 0;
-}
+    .background.community:hover {
+        opacity: 0;
+    }
 
 .pitch-row.download {
     background-image: url(/Content/images/icons/download-alt.png);
@@ -186,9 +207,9 @@ div.pitch-row {
     background-image: url(/Content/images/icons/download.png);
 }
 
-.background.download:hover {
-    opacity: 0;
-}
+    .background.download:hover {
+        opacity: 0;
+    }
 
 .pitch-row.profile {
     background-image: url(/Content/images/icons/profiles-alt.png);
@@ -198,39 +219,50 @@ div.pitch-row {
     background-image: url(/Content/images/icons/profiles.png);
 }
 
-.background.profile:hover {
-    opacity: 0;
-}
-
-/*.pitch-row.design {
-    background-image: url(/Content/images/icons/design.png);
-}
-
-    .pitch-row.design:hover {
-        background-image: url(/Content/images/icons/design-alt.png);
+    .background.profile:hover {
+        opacity: 0;
     }
 
-.pitch-row.community {
-    background-image: url(/Content/images/icons/community.png);
+.container.page {
+    height: 100%;
 }
 
-    .pitch-row.community:hover {
-        background-image: url(/Content/images/icons/community-alt.png);
-    }
-
-
-.pitch-row.download {
-    background-image: url(/Content/images/icons/download.png);
+.container.page h1 {
+    margin-top: 120px;
+    border-bottom: 1px solid #333;
 }
 
-    .pitch-row.download:hover {
-        background-image: url(/Content/images/icons/download-alt.png);
-    }
 
-.pitch-row.profiles {
-    background-image: url(/Content/images/icons/profiles.png);
+#nagging-nav {
+    width: 100%;
+    height: 105px;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    display: none;
 }
 
-    .pitch-row.profiles:hover {
-        background-image: url(/Content/images/icons/profiles-alt.png);
-    }*/
+#nagging-link-holder {
+    width: 960px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+#nagging-link-holder ul {
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+}
+#nagging-link-holder ul li {
+    margin: 0px 10px;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+#nagging-link-holder ul li p{
+    margin-top: 100px;
+    font-weight: bold;
+}
