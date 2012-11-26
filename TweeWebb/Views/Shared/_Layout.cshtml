@@ -20,7 +20,7 @@
                         <li data-id="home" class="pitch-row totop">
                             <div class="background totop"></div>
                         </li>
-                        <li data-id="cloud" class="pitch-row cloud">
+                        <li data-id="cloud" class="pitch-row cloud" style="display: none;">
                             <div class="background cloud"></div>
                         </li>
                         <li data-id="design" class="pitch-row design">
@@ -59,7 +59,7 @@
 
                         <ul class="pitch">
 
-                            <li data-id="cloud">
+                            <li data-id="cloud" style="display: none;">
                                 <div class="pitch-row cloud">
                                     <div class="information">
                                         <h1>Cloud backup</h1>
@@ -83,17 +83,17 @@
                                 <div class="pitch-row download">
                                     <div class="information">
                                         <h1>Download</h1>
-                                        <p>latest beta or keep it safe by downloading stable version</p>
+                                        <p>Latest beta or keep it safe by downloading stable version</p>
                                     </div>
                                     <div class="background download"></div>
                                 </div>
-                                </l>
+                            </li>
 
                             <li data-id="community">
                                 <div class="pitch-row community">
                                     <div class="information">
                                         <h1>Community driven</h1>
-                                        <span>Information comes from the open source community TheTVDB</span>
+                                        <span>Information comes from the open source community The TVDB</span>
                                     </div>
                                     <div class="background community"></div>
                                 </div>
@@ -156,19 +156,15 @@
         //nagging
         $(function () {
             var menu = $('#nagging-nav');
-
             $(window).scroll(function () {
-
                 if ($(this).scrollTop() > 600) {
-
-                    menu.fadeIn(500)
-
+                    menu.fadeIn(500);
                 } else if ($(this).scrollTop() < 600) {
-
-                    menu.fadeOut(500)
+                    menu.fadeOut(500);
                 }
             });
-        });
+        });
+
 
     </script>
 </body>
