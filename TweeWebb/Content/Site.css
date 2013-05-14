@@ -2,11 +2,6 @@ body {
     font-size: .85em;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
     color: #333;
-    background-color: #dfdfdf;
-    background-image: url(/Content/images/large_bg.jpg);
-    background-repeat: repeat-x;
-    overflow: hidden;
-    height: 100%;
 }
 
 html {
@@ -162,7 +157,7 @@ div.pitch-row {
     }
 
 
-    .pitch-row.totop {
+.pitch-row.totop {
     background-image: url(/Content/images/icons/totop-alt.png);
 }
 
@@ -227,9 +222,9 @@ div.pitch-row {
     height: 100%;
 }
 
-.container.page h1 {
-    margin-top: 120px;
-}
+    .container.page h1 {
+        margin-top: 120px;
+    }
 
 
 #nagging-nav {
@@ -249,19 +244,32 @@ div.pitch-row {
     height: 100%;
 }
 
-#nagging-link-holder ul {
-    margin: 0;
-    padding:0;
-    list-style-type: none;
-}
-#nagging-link-holder ul li {
-    margin: 0px 10px;
-    width: 100px;
-    height: 100px;
-    float: left;
+    #nagging-link-holder ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+        #nagging-link-holder ul li {
+            margin: 0px 10px;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+            #nagging-link-holder ul li p {
+                margin-top: 100px;
+                font-weight: bold;
+            }
+
+.box {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-#nagging-link-holder ul li p{
-    margin-top: 100px;
-    font-weight: bold;
+
+.box table, .box h2 {
+    margin: 0;
 }

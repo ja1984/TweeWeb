@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>CSharp.Bitbucket</id>
+    <version>0.1.4500.22869</version>
+    <title>CSharp.Bitbucket</title>
+    <authors>Scott Smith</authors>
+    <owners>Scott Smith</owners>
+    <licenseUrl>http://www.opensource.org/licenses/Apache-2.0</licenseUrl>
+    <projectUrl>https://github.com/scottksmith95/CSharp.Bitbucket</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>C# .NET wrapper for the Bitbucket RESTful API</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2012</copyright>
+    <language />
+    <tags>Bitbucket</tags>
+    <dependencies>
+      <dependency id="Common.Logging" version="2.0.0" />
+      <dependency id="Newtonsoft.Json" version="4.5.3" />
+      <dependency id="Spring.Social.Core" version="1.0.0" />
+    </dependencies>
+  </metadata>
+</package>

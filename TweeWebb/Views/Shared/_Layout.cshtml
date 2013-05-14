@@ -1,171 +1,242 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" type="image/x-icon" href="/Content/images/icon.png" />
+    <link rel="icon" type="image/x-icon" href="/Content/images/icon.png" />
+
     <title>@ViewBag.Title</title>
 
     <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap-responsive.min.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/css/m-styles.min.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link href="@Url.Content("~/Content/bootstrap-override.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/modernizr-2.0.6-development-only.js")" type="text/javascript"></script>
 </head>
 
 <body>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    <div id="menuHolder">
-        <div id="nagging-nav">
-            <div id="nagging-link-holder">
-                <div style="width: 720px; margin: 0 auto; background: #dfdfdf;">
-                    <ul>
-                        <li data-id="home" class="pitch-row totop">
-                            <div class="background totop"></div>
-                        </li>
-                        <li data-id="cloud" class="pitch-row cloud" style="display: none;">
-                            <div class="background cloud"></div>
-                        </li>
-                        <li data-id="design" class="pitch-row design">
-                            <div class="background design"></div>
-                        </li>
-                        <li data-id="download" class="pitch-row download">
-                            <div class="background download"></div>
-                        </li>
-                        <li data-id="community" class="pitch-row community">
-                            <div class="background community"></div>
-                        </li>
-                        <li data-id="profile" class="pitch-row profile">
-                            <div class="background profile"></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- // NAGGING MENU -->
+        ga('create', 'UA-40833760-1', 'twee-app.com');
+        ga('send', 'pageview');
 
-    <div class="container page" id="home">
-        <div class="row-fluid">
-            <div class="span12">
-                <img src="/Content/images/tweelogo_noborder.png" style="float: left; height: 140px; float: right;" /><p style="font-weight: bold; font-size: 100px; margin-top: 60px; float: right;">Twee</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="span5">
-                @RenderBody()
-            </div>
-            <div class="span7">
+    </script>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="/">
+                    <img src="/Content/img/twee-logo.png" style="margin-right: 5px; vertical-align: top;"></a>
 
-                <div class="row-fluid">
-                    <div class="span12">
 
-                        <ul class="pitch">
-
-                            <li data-id="cloud" style="display: none;">
-                                <div class="pitch-row cloud">
-                                    <div class="information">
-                                        <h1>Cloud backup</h1>
-                                        <p>Backup your progress to the internet and sync between devices</p>
-                                    </div>
-                                    <div class="background cloud"></div>
-                                </div>
-                            </li>
-
-                            <li data-id="design">
-                                <div class="pitch-row design">
-                                    <div class="information">
-                                        <h1>Beautiful design</h1>
-                                        <span>Follows the android design guidelines and supports themes</span>
-                                    </div>
-                                    <div class="background design"></div>
-                                </div>
-                            </li>
-
-                            <li data-id="download">
-                                <div class="pitch-row download">
-                                    <div class="information">
-                                        <h1>Download</h1>
-                                        <p>Latest beta or keep it safe by downloading stable version</p>
-                                    </div>
-                                    <div class="background download"></div>
-                                </div>
-                            </li>
-
-                            <li data-id="community">
-                                <div class="pitch-row community">
-                                    <div class="information">
-                                        <h1>Community driven</h1>
-                                        <span>Information comes from the open source community The TVDB</span>
-                                    </div>
-                                    <div class="background community"></div>
-                                </div>
-                            </li>
-
-                            <li data-id="profile">
-                                <div class="pitch-row profile">
-                                    <div class="information">
-                                        <h1>User profiles</h1>
-                                        <p>Multiple users on onw phone</p>
-                                    </div>
-                                    <div class="background profile"></div>
-                                </div>
-                            </li>
-
+                <ul class="nav pull-right">
+                    <li><a href="https://play.google.com/store/apps/details?id=se.ja1984.twee" target="_blank">Play store</a></li>
+                    <li class="dropdown hidden-phone hidden-tablet">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Qr code</a>
+                        <ul class="dropdown-menu">
+                            <img src="/Content/images/qr.png" />
                         </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
 
 
+    <div id="myCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item" style="background-image: url(/Content/images/promo/promo_bg1.jpg)">
+                <img src="/Content/images/promo/promo.png" class="large-twee" />
+            </div>
+
+            <div class="item" style="background-image: url(/Content/images/promo/promo_bg2.jpg)">
+                <img src="/Content/images/promo/promo.png" class="large-twee" />
+            </div>
+
+            <div class="item" style="background-image: url(/Content/images/promo/promo_bg3.jpg)">
+                <img src="/Content/images/promo/promo.png" class="large-twee" />
+            </div>
+
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+
+
+    <div class="container" style="margin-top: 30px;">
+        <div class="marketing">
+            <div class="row-fluid">
+                <div class="span4">
+                    <div class="marketing-img-wrapper">
+                        <img class="marketing-img" src="/Content/images/icons/profiles-alt.png" />
                     </div>
+                    <h2>User profiles</h2>
+                    <p>Let your parner use the amazing Twee aswell by letting him/her creating his/her own profile for their shows.</p>
+                </div>
+                <div class="span4">
+                    <div class="marketing-img-wrapper">
+                        <img class="marketing-img" src="/Content/images/icons/community-alt.png" />
+                    </div>
+                    <h2>Community driven</h2>
+                    <p>Twee gets all it´s show information from <a href="http://www.thetvdb.com" target="_blank">TheTVDB</a>.</p>
+                </div>
+                <div class="span4">
+                    <div class="marketing-img-wrapper">
+                        <img class="marketing-img" src="/Content/images/icons/design-alt.png" />
+                    </div>
+                    <h2>Holo design</h2>
+                    <p>Twee follows the new holo guide lines to make an beautiful looking app, it also supports themes.</p>
                 </div>
             </div>
         </div>
-
-    </div>
-    <div class="container page" id="cloud">
-        <h1>Cloud Backup</h1>
-    </div>
-    <div class="container page" id="design">
-        <h1>Beautiful Design</h1>
-    </div>
-    <div class="container page" id="download">
-        <h1>Download</h1>
-    </div>
-    <div class="container page" id="community">
-        <h1>Community driven</h1>
-    </div>
-    <div class="container page" id="profile">
-        <h1>Profiles</h1>
     </div>
 
+    <div class="container">
+        <div class="row-fluid">
+            <ul class="thumbnails">
+                <li class="span2">
+                    <a href="/Content/images/screenshots/ss1.jpg" rel="group" title="DashClock integration" class="thumbnail fancybox">
+                        <img src="/Content/images/screenshots/ss1_t.jpg"></a>
+                </li>
+                <li class="span2">
+                    <a href="/Content/images/screenshots/ss2.jpg" rel="group" title="Twee has its own widget aswell" class="thumbnail fancybox">
+                        <img src="/Content/images/screenshots/ss2_t.jpg"></a>
+                </li>
+                <li class="span2">
+                    <a href="/Content/images/screenshots/ss3.jpg" rel="group" title="Choose from one of four layouts" class="thumbnail fancybox">
+                        <img src="/Content/images/screenshots/ss3_t.jpg"></a>
+                </li>
+                <li class="span2">
+                    <a href="/Content/images/screenshots/ss4.jpg" rel="group" title="Choose from one of four layouts" class="thumbnail fancybox">
+                        <img src="/Content/images/screenshots/ss4_t.jpg"></a>
+                </li>
+                <li class="span2">
+                    <a href="/Content/images/screenshots/ss5.jpg" rel="group" title="Choose from one of four layouts" class="thumbnail fancybox">
+                        <img src="/Content/images/screenshots/ss5_t.jpg"></a>
+                </li>
+                <li class="span2">
+                    <a href="/Content/images/screenshots/ss6.jpg" rel="group" title="Choose from one of four layouts" class="thumbnail fancybox">
+                        <img src="/Content/images/screenshots/ss6_t.jpg"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="row-fluid">
+            <ul class="thumbnails">
+                <li class="span2">
+                    <a href="/Content/images/screenshots/ss7.jpg" rel="group" title="The search have lots of usefull information" class="thumbnail fancybox">
+                        <img src="/Content/images/screenshots/ss7_t.jpg"></a>
+                </li>
+                <li class="span2">
+                    <a href="/Content/images/screenshots/ss8.jpg" rel="group" title="Settings to control the main functionallity" class="thumbnail fancybox">
+                        <img src="/Content/images/screenshots/ss8_t.jpg"></a>
+                </li>
+                <li class="span2">
+                    <a href="/Content/images/screenshots/ss9.jpg" rel="group" title="Three different themes" class="thumbnail fancybox">
+                        <img src="/Content/images/screenshots/ss9_t.jpg"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
+    <div class="container content" style="margin-top: 30px;">
 
+        <h2 class="pull-left">Issues</h2>
+        <a href="https://bitbucket.org/_booty/twee/issues" target="_blank" class="pull-right">Create your own issue</a>
+        <table class="table">
+            <tbody data-bind="foreach: issues">
+                <tr data-bind="css: issueStatus">
+                    <td>
+                        <a href="" data-bind="text: Title, attr:{'href': resource_uri}"></a>
 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <script src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/modernizr-2.0.6-development-only.js")" type="text/javascript"></script>
+    <link rel="stylesheet" href="/Content/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+    <script src="/Scripts/jquery.fancybox.pack.js"></script>
     <script type="text/javascript" src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/knockout-2.2.1.js"></script>
     @RenderSection("JavaScript", false)
+
     <script type="text/javascript">
+
+        var IssuesModel = function () {
+            var priv = {};
+            var pub = {};
+
+            priv.issue = function (item) {
+                var inner = {};
+                inner = item;
+
+                inner.issueStatus = ko.computed(function () {
+                    switch (inner.Priority) {
+                        case "critical":
+                            return "error";
+                        case "minor":
+                            return "info";
+                        case "major":
+                            return "warning";
+                        case "trivial":
+                            return "success";
+                        default:
+                            return "";
+                    }
+                });
+
+                return inner;
+            };
+
+            pub.issues = ko.observableArray([]);
+
+            priv.init = function () {
+                $(".fancybox").fancybox(
+                    {
+                        helpers: {
+                            title: {
+                                type: 'inside' // 'float', 'inside', 'outside' or 'over'
+                            }
+                        }
+                    });
+
+                $.ajax({
+                    url: "/Home/GetIssues",
+                    dataType: "json",
+                    success: function (response) {
+                        $.each(response, function () {
+                            pub.issues.push(new priv.issue(this));
+                        });
+                    }
+                });
+            };
+
+            priv.init();
+
+            return pub;
+        };
+
+
         $(function () {
-            $('li').click(function () {
-                var id = $(this).data("id");
-                $('html, body').animate({
-                    scrollTop: $('#' + id).offset().top
-                }, 2000);
-            });
-
+            var issuesModel = new IssuesModel();
+            ko.applyBindings(issuesModel);
         });
-
-
-        //nagging
-        $(function () {
-            var menu = $('#nagging-nav');
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 600) {
-                    menu.fadeIn(500);
-                } else if ($(this).scrollTop() < 600) {
-                    menu.fadeOut(500);
-                }
-            });
-        });
-
-
     </script>
 </body>
 </html>
