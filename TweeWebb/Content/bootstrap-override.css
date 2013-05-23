@@ -1,9 +1,8 @@
 ﻿.navbar-inner {
     padding-left: 20px;
     padding-right: 20px;
-    background: #ef8d18;
+    background: rgba(0, 0, 0, .6);
     border: none;
-    border-bottom: 1px solid #79141c;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -11,6 +10,9 @@
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
     *zoom: 1;
+}
+
+ul {
 }
 
 .navbar .nav li.dropdown.open > .dropdown-toggle {
@@ -42,7 +44,7 @@
     }
 
 .navbar .brand {
-    padding: 9px 20px 10px;
+    padding: 9px 20px 11px;
     font-size: 24px;
     font-weight: normal;
 }
@@ -83,9 +85,14 @@ a.brand span {
 
 @media (max-width: 979px) {
 
-    .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
-        padding: 0;
+    .navbar-fixed-top {
+        margin-bottom: 0;
+        position: absolute;
     }
+
+        .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+            padding: 0;
+        }
 
     body {
         padding-top: 0;

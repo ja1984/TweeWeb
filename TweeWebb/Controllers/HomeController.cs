@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using RestSharp;
+using TweeWebb.Models;
 
 namespace TweeWebb.Controllers
 {
@@ -19,10 +20,16 @@ namespace TweeWebb.Controllers
             return View();
         }
 
+        public ActionResult Thanks()
+        {
+            return View();
+        }
+
+
         public JsonResult GetIssues()
         {
             var client = new RestClient("https://api.bitbucket.org/1.0/");
-            client.Authenticator = new HttpBasicAuthenticator("_booty", "#annalena");
+            client.Authenticator = new HttpBasicAuthenticator(Secret.Username, Secret.Password);
             var request = new RestRequest("repositories/_booty/twee/issues/");
             var response = client.Execute<BitBucketResponse>(request);
 

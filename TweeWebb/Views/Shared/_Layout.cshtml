@@ -37,6 +37,7 @@
 
 
                 <ul class="nav pull-right">
+                    <li><a href="#donateModal" data-toggle="modal" data-target="#donateModal">Donate</a></li>
                     <li><a href="https://play.google.com/store/apps/details?id=se.ja1984.twee" target="_blank">Play store</a></li>
                     <li class="dropdown hidden-phone hidden-tablet">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Qr code</a>
@@ -44,9 +45,8 @@
                             <img src="/Content/images/qr.png" />
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
+                    <li><a href="#contactModal" data-toggle="modal" data-target="#contactModal">Contact</a></li>
+
                 </ul>
 
             </div>
@@ -55,9 +55,6 @@
 
 
     <div id="myCarousel" class="carousel slide">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        </ol>
         <!-- Carousel items -->
         <div class="carousel-inner">
             <div class="active item" style="background-image: url(/Content/images/promo/promo_bg1.jpg)">
@@ -169,6 +166,50 @@
             </tbody>
         </table>
     </div>
+
+
+
+    <div id="donateModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Donate</h3>
+        </div>
+        <div class="modal-body">
+            <p>Twe is and will always be <strong>free</strong>, how ever if you like Twee and feel that you want to support it somehow you can make an donation via PayPal</p>
+            <h3 style="text-align: center;">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="26JD5K23QU4MY">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+
+            </h3>
+            <p>Or you can make an donation to <a href="http://www.thetvdb.com/donate/" target="_blank">The TVDB</a> And make sure to tell me some how so that i can put your name in the app!</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Contact</h3>
+        </div>
+        <div class="modal-body">
+            <h2 style="text-align: center;">jonathan@twee-app.com</h2>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+
+
+    @RenderBody()
+
+
     <script src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")" type="text/javascript"></script>
     <link rel="stylesheet" href="/Content/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
     <script src="/Scripts/jquery.fancybox.pack.js"></script>
@@ -207,6 +248,7 @@
             pub.issues = ko.observableArray([]);
 
             priv.init = function () {
+
                 $(".fancybox").fancybox(
                     {
                         helpers: {

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Thanks for donating to twee!";
+}
+
+
+<div id="thanksModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Thank you for donation</h3>
+    </div>
+    <div class="modal-body">
+        <h3 style="text-align:center;">You are awesome!</h3>
+        <p>Don't forget to tell me that you have donated so that I can put your name in Twee!</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
+
+@section JavaScript
+{
+    <script type="text/javascript">
+        $(function() {
+            $('#thanksModal').modal();
+        });
+    </script>
+}
