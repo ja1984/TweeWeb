@@ -100,6 +100,15 @@ a.brand span {
     height: 541px;
 }
 
+.phone-wrapper .carousel-inner {
+    height: 416px;
+    width: 252px;
+}
+
+.phone-overlay {
+    margin: 0 auto;
+}
+
 .large-twee {
     margin: 0 auto;
 }
