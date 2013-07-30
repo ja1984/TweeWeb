@@ -18,12 +18,27 @@ namespace TweeWebb.Models
         public string Rating { get; set; }
         public string Status { get; set; }
         public string FirstAired { get; set; }
-        public List<Episodes> Episodes{ get; set; }
+        public List<Episodes> Episodes { get; set; }
+        public List<Season> Seasons { get; set; }
 
         public string GetImage()
         {
-            return string.Format("http://www.thetvdb.com/banners/graphical/{0}.jpg",SeriesId);
+            return string.Format("/banners/{0}.jpg", SeriesId);
         }
 
     }
+
+    public class Season
+    {
+        public int Watched { get; set; }
+        public int Unwatched { get; set; }
+        public int Number { get; set; }
+
+        public string getSeason()
+        {
+            return Number == 0 ? "Specials" : string.Format("Season {0}", Number);
+        }
+
+    }
+
 }

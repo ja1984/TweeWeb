@@ -1,13 +1,38 @@
 ﻿@model TweeWebb.Models.Backup
 @{
     ViewBag.Title = "Index";
-    Layout = null;
+    Layout = "~/Views/Shared/_SocialLayout.cshtml";
 }
+<div id="container">
+    @foreach (var show in Model.Shows)
+    {
+    
+    
+        <div class="box">
+            <div class="header">
+                <img src="@(show.GetImage())" />
+                <div class="overlay">
+                    <h2>@show.Name</h2>
+                </div>
+            </div>
+            <div class="summary">
+                <p>@show.Summary</p>
+            </div>
+            <div class="seasons">
+                <ul class="unstyled">
+                    @foreach(var season in show.Seasons)
+                    {
+                        <li>@season.getSeason()
+                            
+                            <div class="progress pull-right">
+                                    <div class="progress-bar" style="width: 60%;"></div>
+                            </div>
+                        </li>
+                    }
+                        
+                </ul>
+            </div>
 
-<h1>@Model.Username</h1>
-
-@foreach (var show in Model.Shows)
-{
-    <h2>@show.Name</h2>
-    <p>@show.Episodes.Count(x => x.Watched == "1") / @show.Episodes.Count</p>
-}
+        </div>
+    }
+</div>

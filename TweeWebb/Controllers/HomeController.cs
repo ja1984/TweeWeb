@@ -28,18 +28,19 @@ namespace TweeWebb.Controllers
 
         public JsonResult GetIssues()
         {
-            var client = new RestClient("https://api.bitbucket.org/1.0/");
-            client.Authenticator = new HttpBasicAuthenticator(Secret.Username, Secret.Password);
-            var request = new RestRequest("repositories/_booty/twee/issues/");
-            var response = client.Execute<BitBucketResponse>(request);
+            //var client = new RestClient("https://api.bitbucket.org/1.0/");
+            //client.Authenticator = new HttpBasicAuthenticator(Secret.Username, Secret.Password);
+            //var request = new RestRequest("repositories/_booty/twee/issues/");
+            //var response = client.Execute<BitBucketResponse>(request);
 
-            var issues = response.Data.Issues.ToList();
+            //var issues = response.Data.Issues.ToList();
 
-            foreach (var issue in issues)
-            {
-                issue.resource_uri = issue.resource_uri.Replace("/1.0/repositories/", "https://bitbucket.org/").Replace("issues","issue");
-            }
-            return Json(issues, JsonRequestBehavior.AllowGet);
+            //foreach (var issue in issues)
+            //{
+            //    issue.resource_uri = issue.resource_uri.Replace("/1.0/repositories/", "https://bitbucket.org/").Replace("issues","issue");
+            //}
+            //return Json(issues, JsonRequestBehavior.AllowGet);
+            return Json("");
 
         }
 
