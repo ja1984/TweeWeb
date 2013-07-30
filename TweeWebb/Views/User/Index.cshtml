@@ -19,17 +19,24 @@
                 <p>@show.Summary</p>
             </div>
             <div class="seasons">
-                <ul class="unstyled">
-                    @foreach(var season in show.Seasons)
+                <ul class="unstyled season">
+                    @foreach (var season in show.Seasons)
                     {
-                        <li>@season.getSeason()
+                        <li>
                             
-                            <div class="progress pull-right">
-                                    <div class="progress-bar" style="width: 60%;"></div>
-                            </div>
+                            <div class="seasonwrapper">
+                            @season.getSeason()<div class="progress pull-right clearfix">
+                                                         <div class="progress-bar" style="width: 60%;"></div>
+                                                     </div><div style="clear: both;"></div></div>
+                            <ul class="unstyled episodes" style="display: none;">
+                                @foreach (var episode in show.Episodes.Where(x => x.Season == season.Number.ToString()).OrderBy(x=>x.Aired))
+                                {
+                                    <li>@episode.GetTitle()  <i style='color: @(episode.Watched=="1"?"#428bca;":"#e2e2e2")' class="icon-ok-sign icon-2 pull-right"></i></li>
+                                }
+                            </ul>
                         </li>
                     }
-                        
+
                 </ul>
             </div>
 

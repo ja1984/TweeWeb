@@ -5,6 +5,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="/Content/images/icon.png" />
         <link rel="icon" type="image/x-icon" href="/Content/images/icon.png" />
         <title>@ViewBag.Title</title>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <link href="/Content/Social/Site.css" rel="stylesheet" />
     </head>
 <body>
@@ -37,7 +38,16 @@
             $container.masonry({
                 itemSelector: '.box'
             });
+            $(".seasonwrapper").click(function() {
+                var episodeList = $(this).next();
+                episodeList.slideToggle(400, function () { $container.masonry(); });
+                
+            });
         });
+        
+
+        
+
     </script>
 
 </body>

@@ -299,7 +299,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Banners\" />
+    <Folder Include="Banners\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

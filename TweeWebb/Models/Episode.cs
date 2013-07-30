@@ -13,5 +13,15 @@ namespace TweeWebb.Models
         public string Aired { get; set; }
         public string Watched { get; set; }
         public string EpisodeId { get; set; }
+
+
+        public string GetTitle()
+        {
+            return string.IsNullOrEmpty(Title) ? string.Format("Episode {0}",Episode) : string.Format("{0}. {1}",Episode,Title);
+        }
+
     }
+
+
+
 }
