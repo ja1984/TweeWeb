@@ -79,6 +79,13 @@ namespace TweeWebb.Controllers
                     missingImages.Add(show.SeriesId);
                 }
             }
+
+            if (missingImages.Any())
+            {
+                RavenSession.Store(missingImages);
+                RavenSession.SaveChanges();
+            }
+
             return Content("Done");
 
         }
