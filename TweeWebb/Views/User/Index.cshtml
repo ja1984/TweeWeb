@@ -4,10 +4,12 @@
     Layout = "~/Views/Shared/_SocialLayout.cshtml";
 }
 <div id="container">
+    @{
+        int i = 0;
+    }
     @foreach (var show in Model.Shows)
     {
-    
-    
+ 
         <div class="box">
             <div class="header">
                 <img src="@(show.GetImage())" />
@@ -23,15 +25,17 @@
                     @foreach (var season in show.Seasons)
                     {
                         <li>
-                            
+
                             <div class="seasonwrapper">
-                            @season.getSeason()<div class="progress pull-right clearfix">
-                                                         <div class="progress-bar" style="width: 60%;"></div>
-                                                     </div><div style="clear: both;"></div></div>
+                                @season.getSeason()<div class="progress pull-right clearfix">
+                                    <div class="progress-bar" style="width: 60%;"></div>
+                                </div>
+                                <div style="clear: both;"></div>
+                            </div>
                             <ul class="unstyled episodes" style="display: none;">
-                                @foreach (var episode in show.Episodes.Where(x => x.Season == season.Number.ToString()).OrderBy(x=>x.Aired))
+                                @foreach (var episode in show.Episodes.Where(x => x.Season == season.Number.ToString()).OrderBy(x => x.Aired))
                                 {
-                                    <li>@episode.GetTitle()  <i style='color: @(episode.Watched=="1"?"#428bca;":"#e2e2e2")' class="icon-ok-sign icon-2 pull-right"></i></li>
+                                    <li>@episode.GetTitle()  <i style='color: @(episode.Watched == "1" ? "#428bca;" : "#e2e2e2")' class="icon-ok-sign icon-2 pull-right"></i></li>
                                 }
                             </ul>
                         </li>
@@ -41,5 +45,16 @@
             </div>
 
         </div>
+        
+                    if (i % 5 == 0)
+                    {
+        <div class="box ad">
+            <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+        </div>
+                    }
+
+                    i++;
     }
 </div>
