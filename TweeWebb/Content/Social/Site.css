@@ -74,6 +74,10 @@ div.box {
     margin: 20px 0 0 20px;
 }
 
+div.box.ad {
+    text-align: center;
+}
+
     div.box .header {
         position: relative;
     }
