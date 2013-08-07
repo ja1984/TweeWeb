@@ -14,8 +14,8 @@ namespace TweeWebb.Controllers
     {
         //
         // GET: /User/
-        private static string BannerUrl = "http://www.thetvdb.com/banners/fanart/original/{0}-1.jpg";
 
+        [HttpGet]
         public ActionResult Index(string userName)
         {
             var backup = RavenSession.Query<Backup>().FirstOrDefault(x => x.Username == userName);
@@ -34,8 +34,8 @@ namespace TweeWebb.Controllers
                     show.Seasons.Add(new Season()
                         {
                             Number = int.Parse(season.Key),
-                            Unwatched = season.Where(x => x.Watched == "0").Count(),
-                            Watched = season.Where(x => x.Watched == "1").Count()
+                            Unwatched = season.Count(x => x.Watched == "0"),
+                            Watched = season.Count(x => x.Watched == "1")
                         });
                 }
             }
@@ -47,75 +47,10 @@ namespace TweeWebb.Controllers
             return View(backup);
         }
 
-        [HttpPost]
-        public JsonResult Add(Backup backup)
-        {
-
-            try
-            {
-                RavenSession.Store(backup);
-                RavenSession.SaveChanges();
-
-                return Json(new { Success = true, Message = "" });
-            }
-            catch (Exception ex)
-            {
-                return Json(new { Success = false, Message = ex.Message });
-            }
-
-        }
+        
 
 
-        public ActionResult SaveImages()
-        {
-
-            List<string> missingImages = new List<string>();
-
-            var backup = RavenSession.Query<Backup>().FirstOrDefault(x => x.Username == "Jonathan");
-            foreach (var show in backup.Shows)
-            {
-                if (!SaveImage(show.SeriesId))
-                {
-                    missingImages.Add(show.SeriesId);
-                }
-            }
-
-            if (missingImages.Any())
-            {
-                RavenSession.Store(missingImages);
-                RavenSession.SaveChanges();
-            }
-
-            return Content("Done");
-
-        }
-
-        private bool SaveImage(string id)
-        {
-            try
-            {
-                string remoteImageUrl = string.Format(BannerUrl, id);
-                string strRealname = Path.GetFileName(remoteImageUrl);
-                string exts = Path.GetExtension(remoteImageUrl);
-                string location = Server.MapPath("~/banners/");
-
-                string filename = id + ".jpg";
-
-                string saveurl = location + filename;
-
-                if (System.IO.File.Exists(saveurl))
-                    return true;
-
-                WebClient webClient = new WebClient();
-                webClient.DownloadFile(remoteImageUrl, saveurl);
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-        }
+        
 
 
     }
