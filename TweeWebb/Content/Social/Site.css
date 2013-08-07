@@ -164,3 +164,13 @@ ul.season li div.seasonwrapper:first-child {
 .clearfix:after {
     clear: both;
 }
+
+
+@media screen and (max-width: 768px) {
+    div.box {
+        width: auto;
+        float: none;
+        padding: 10px;
+        margin: 10px 10px 0 10px;
+    }
+}
