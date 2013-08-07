@@ -16,9 +16,9 @@ namespace TweeWebb.Controllers
         // GET: /User/
         private static string BannerUrl = "http://www.thetvdb.com/banners/fanart/original/{0}-1.jpg";
 
-        public ActionResult Index(string user)
+        public ActionResult Index(string userName)
         {
-            var backup = RavenSession.Query<Backup>().FirstOrDefault(x => x.Username == user);
+            var backup = RavenSession.Query<Backup>().FirstOrDefault(x => x.Username == userName);
 
 
             if (backup.Shows.Any(x => x.Seasons != null && x.Seasons.Any()))

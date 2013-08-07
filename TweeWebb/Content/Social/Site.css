@@ -61,10 +61,14 @@ body {
     color: #555;
 }
 
-#container {
+#container, .container {
     max-width: 1300px;
     margin: 0 auto;
 }
+
+    .container.header {
+        margin-top: 20px;
+    }
 
 div.box {
     width: 380px;
@@ -74,9 +78,9 @@ div.box {
     margin: 20px 0 0 20px;
 }
 
-div.box.ad {
-    text-align: center;
-}
+    div.box.ad {
+        text-align: center;
+    }
 
     div.box .header {
         position: relative;
@@ -169,6 +173,28 @@ ul.season li div.seasonwrapper:first-child {
     clear: both;
 }
 
+.logo {
+    margin: 20px 0 0 20px;
+    border-bottom: 2px solid transparent;
+}
+
+a:link.logo, a:visited.logo, a:active.logo {
+    color: #999;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+    padding-bottom: 3px;
+    
+}
+
+.logo:hover {
+    border-color: #ff941e;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    
+}
 
 @media screen and (max-width: 768px) {
     div.box {
@@ -176,5 +202,14 @@ ul.season li div.seasonwrapper:first-child {
         float: none;
         padding: 10px;
         margin: 10px 10px 0 10px;
+    }
+
+
+    .logo {
+        margin: 10px 0 0 10px;
+    }
+
+    .container.header {
+        margin-top: 10px;
     }
 }

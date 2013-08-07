@@ -24,6 +24,12 @@ namespace TweeWebb
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "Default2", // Route name
+                "User/{userName}", // URL with parameters
+                new { controller = "User", action = "Index", userName = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
