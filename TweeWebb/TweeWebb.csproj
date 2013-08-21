@@ -45,6 +45,9 @@
     <Reference Include="CSharp.Bitbucket">
       <HintPath>..\packages\CSharp.Bitbucket.0.1.4500.22869\lib\net40\CSharp.Bitbucket.dll</HintPath>
     </Reference>
+    <Reference Include="ImageResizer">
+      <HintPath>..\packages\ImageResizer.3.3.3\lib\ImageResizer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CompilerServices.AsyncTargetingPack.Net45">
       <HintPath>..\packages\Microsoft.CompilerServices.AsyncTargetingPack.1.0.1\lib\net45\Microsoft.CompilerServices.AsyncTargetingPack.Net45.dll</HintPath>
     </Reference>
@@ -135,6 +138,7 @@
     <Compile Include="Models\Episode.cs" />
     <Compile Include="Models\Secret.cs" />
     <Compile Include="Models\Show.cs" />
+    <Compile Include="MoreLinq\MoreEnumerable.DistinctBy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -297,6 +301,7 @@
     <Content Include="Views\Home\Thanks.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Shared\_SocialLayout.cshtml" />
+    <Content Include="Views\Manage\Stats.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

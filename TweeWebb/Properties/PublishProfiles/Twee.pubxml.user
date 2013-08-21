@@ -26,6 +26,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/EntityFramework.dll">
       <publishTime>11/26/2012 22:15:43</publishTime>
     </File>
+    <File Include="bin/ImageResizer.dll">
+      <publishTime>08/18/2013 23:06:07</publishTime>
+    </File>
     <File Include="bin/Microsoft.CompilerServices.AsyncTargetingPack.Net45.dll">
       <publishTime>07/05/2013 23:31:27</publishTime>
     </File>
@@ -72,7 +75,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2012 22:15:43</publishTime>
     </File>
     <File Include="bin/TweeWebb.dll">
-      <publishTime>08/07/2013 23:39:36</publishTime>
+      <publishTime>08/21/2013 21:16:55</publishTime>
     </File>
     <File Include="Content/bootstrap-override.css">
       <publishTime>05/23/2013 22:56:26</publishTime>
@@ -324,7 +327,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/14/2013 23:35:00</publishTime>
     </File>
     <File Include="Content/Social/Site.css">
-      <publishTime>08/08/2013 00:09:35</publishTime>
+      <publishTime>08/21/2013 22:44:24</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
       <publishTime>11/26/2012 22:15:42</publishTime>
@@ -411,7 +414,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2012 22:15:42</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>07/05/2013 23:31:28</publishTime>
+      <publishTime>08/21/2013 21:14:12</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>11/26/2012 22:15:42</publishTime>
@@ -503,6 +506,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Home/Thanks.cshtml">
       <publishTime>05/21/2013 23:06:05</publishTime>
     </File>
+    <File Include="Views/Manage/Stats.cshtml">
+      <publishTime>08/21/2013 23:09:09</publishTime>
+    </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/26/2012 22:15:43</publishTime>
     </File>
@@ -510,10 +516,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/03/2013 21:08:51</publishTime>
     </File>
     <File Include="Views/Shared/_SocialLayout.cshtml">
-      <publishTime>08/08/2013 00:13:15</publishTime>
+      <publishTime>08/18/2013 22:15:16</publishTime>
     </File>
     <File Include="Views/User/Index.cshtml">
-      <publishTime>08/08/2013 00:18:13</publishTime>
+      <publishTime>08/18/2013 23:30:22</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>11/26/2012 22:15:43</publishTime>
@@ -522,7 +528,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2012 22:15:43</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/08/2013 00:18:21</publishTime>
+      <publishTime>08/21/2013 23:12:57</publishTime>
     </File>
   </ItemGroup>
 </Project>

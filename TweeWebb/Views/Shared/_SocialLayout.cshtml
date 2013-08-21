@@ -33,8 +33,13 @@
     <div class="nav">
         <div class="container header">
             <a href="http://www.twee-app.com" title="Link to twee page" class="logo">
-                <img src="/Content/img/twee-logo.png" style="vertical-align: bottom;">
-                Social</a>
+                <img src="/Content/img/twee-logo.png" style="vertical-align: bottom;">Social</a>
+            <div style="float: right; padding-right: 40px;">
+                <!-- Place this tag where you want the +1 button to render. -->
+                <div class="g-plusone" data-size="medium" data-annotation="none"></div>
+
+
+            </div>
         </div>
     </div>
 
@@ -46,28 +51,47 @@
     <div style="clear: both;"></div>
     <div style="text-align: center; margin-top: 15px;"><a href="https://plus.google.com/107604673419334925296" rel="publisher">Google+</a></div>
 
+
+
+    <!-- Place this tag after the last +1 button tag. -->
+    <script type="text/javascript">
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+
     <script src="/Scripts/jquery-1.8.2.js"></script>
     <script src="/Scripts/masonry.pkgd.min.js"></script>
     <script type="text/javascript">
+
+        var downloadMissingImages = function () {
+            $.ajax({ url: "/Manage/SaveImages", data: {} });
+        };
+
         $(function () {
+
+            downloadMissingImages();
             var $container = $('#container');
             // initialize
             $container.masonry({
                 itemSelector: '.box'
             });
 
-            $container.imagesLoaded(function () {
-                $container.masonry();
-            });
+            //$container.imagesLoaded(function () {
+            //    $container.masonry();
+            //});
             $(".seasonwrapper").click(function () {
                 var episodeList = $(this).next();
                 episodeList.slideToggle(400, function () { $container.masonry(); });
 
             });
+
+
+
+
         });
-
-
-
 
     </script>
 

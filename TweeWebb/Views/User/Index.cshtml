@@ -12,7 +12,7 @@
  
         <div class="box">
             <div class="header">
-                <img src="@(show.GetImage())" />
+                <img src="@(show.GetImage())" alt="@show.Name"/>
                 <div class="overlay">
                     <h2>@show.Name</h2>
                 </div>
@@ -22,13 +22,13 @@
             </div>
             <div class="seasons">
                 <ul class="unstyled season">
-                    @foreach (var season in show.Seasons)
+                    @foreach (var season in show.Seasons.OrderBy(x => x.Number))
                     {
                         <li>
 
                             <div class="seasonwrapper">
                                 @season.getSeason()<div class="progress pull-right clearfix">
-                                    <div class="progress-bar" style="width: 60%;"></div>
+                                    <div class="progress-bar" style="width: @(season.Percent)%;"></div>
                                 </div>
                                 <div style="clear: both;"></div>
                             </div>
@@ -46,12 +46,12 @@
 
         </div>
         
-                    if (i % 5 == 0)
+                    if (i == 0)
                     {
         <div class="box ad">
             <script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
         </div>
                     }
 

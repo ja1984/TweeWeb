@@ -88,7 +88,7 @@ div.box {
 
         div.box .header img {
             width: 100%;
-            /*min-height: 242px;*/
+            min-height: 214px;
             vertical-align: top;
         }
 
@@ -104,7 +104,7 @@ div.box {
                 color: #fff;
                 margin: 0;
                 padding: 6px;
-                font-size: 28px;
+                font-size: 26px;
                 text-transform: uppercase;
                 text-shadow: 1px 1px 1px #000;
                 font-weight: bold;
@@ -117,6 +117,24 @@ div.box {
         div.box .summary p {
             font-size: 14px;
         }
+
+li.user a, li.user a:visited {
+    font-size: 21px;
+    line-height: 26px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+li.user a:hover {
+    color: #ff941e;
+}
+
+div.box.user h2 {
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 10px;
+}
 
 
 
@@ -184,7 +202,6 @@ a:link.logo, a:visited.logo, a:active.logo {
     font-style: italic;
     font-weight: bold;
     padding-bottom: 3px;
-    
 }
 
 .logo:hover {
@@ -193,7 +210,6 @@ a:link.logo, a:visited.logo, a:active.logo {
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
-    
 }
 
 @media screen and (max-width: 768px) {

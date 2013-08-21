@@ -23,7 +23,7 @@ namespace TweeWebb.Models
 
         public string GetImage()
         {
-            return string.Format("/banners/{0}.jpg", SeriesId);
+            return string.Format("/headers/r_{0}.jpg", SeriesId);
         }
 
     }
@@ -33,6 +33,7 @@ namespace TweeWebb.Models
         public int Watched { get; set; }
         public int Unwatched { get; set; }
         public int Number { get; set; }
+        public decimal Percent { get; set; }
 
         public string getSeason()
         {

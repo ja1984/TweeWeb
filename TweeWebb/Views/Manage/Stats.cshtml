@@ -1,0 +1,34 @@
+﻿@using TweeWebb.Models
+@model TweeWebb.Controllers.StatsViewModel
+@{
+    ViewBag.Title = "Twee Social Page - Stats";
+    Layout = "~/Views/Shared/_SocialLayout.cshtml";
+}
+<div class="container">
+
+    <div class="box user">
+        <h2>Users</h2>
+        <ul class="unstyled">
+            @foreach (Backup backup in Model.Users)
+            {
+                <li class="user"><a href="/user/@backup.Username">@backup.Username<span class="pull-right">@backup.Shows.Count shows</span></a></li>
+            }
+        </ul>
+    </div>
+
+
+    <div class="box user">
+        <h2>Top 10 shows</h2>
+        <ul class="unstyled">
+            @{
+                var i = 1;
+            }
+            @foreach (var show in Model.Shows)
+            {
+                <p>@(i). @show.Key<span class="pull-right">in <strong>@show.Count()</strong> users list</span></p>
+                i++;
+            }
+        </ul>
+    </div>
+
+</div>

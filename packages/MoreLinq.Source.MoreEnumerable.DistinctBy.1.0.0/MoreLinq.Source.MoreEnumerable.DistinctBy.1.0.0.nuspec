@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>MoreLinq.Source.MoreEnumerable.DistinctBy</id>
+    <version>1.0.0</version>
+    <title>MoreLINQ's DistinctBy for C# Sequences (Source)</title>
+    <authors>MoreLINQ Developers</authors>
+    <owners>MoreLINQ Developers</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>http://code.google.com/p/morelinq/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>C# source implementation that enhances LINQ to Objects with the method DistinctBy. Returns all distinct elements of the given source, where "distinctness" is determined via a projection and the default eqaulity comparer for the projected type.</description>
+    <summary>Enhances LINQ to Objects with the method DistinctBy  (2 overloads)</summary>
+    <releaseNotes />
+    <copyright />
+    <language>en-US</language>
+    <tags>linq extensions</tags>
+  </metadata>
+</package>
